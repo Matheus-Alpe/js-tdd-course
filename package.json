@@ -7,7 +7,8 @@
   "scripts": {
     "lint": "npx eslint src/*.js",
     "prepush": "npm run lint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --color --progress",
+    "watch": "npm run build -- --watch"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,15 @@
     "eslint": "^7.21.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
-    "husky": "^0.11.9"
+    "husky": "^0.11.9",
+    "ramda": "^0.27.1",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-es2015-native-modules": "^6.9.4",
+    "webpack": "^5.24.2",
+    "webpack-dev-server": "^3.11.2"
   }
 }
