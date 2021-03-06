@@ -7,8 +7,8 @@
   "scripts": {
     "lint": "npx eslint src/*.js",
     "prepush": "npm run lint",
-    "build": "webpack --color --progress",
-    "watch": "npm run build -- --watch"
+    "test": "clear && mocha ./tests/**/*.spec.js",
+    "test:tdd": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -26,18 +26,12 @@
   },
   "homepage": "https://github.com/Matheus-Alpe/js-tdd-course#readme",
   "devDependencies": {
+    "chai": "^4.3.3",
     "eslint": "^7.21.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "husky": "^0.11.9",
-    "webpack-cli": "^4.5.0"
+    "mocha": "^8.3.1"
   },
-  "dependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-preset-es2015-native-modules": "^6.9.4",
-    "webpack": "^5.24.2",
-    "ramda": "^0.27.1",
-    "webpack-dev-server": "^3.11.2"
-  }
+  "dependencies": {}
 }
