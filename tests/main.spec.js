@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import FizzBuzz from '../src/main';
 
-describe('[Main] - Fizzbuz', () => {
+describe('[main] - Fizzbuz', () => {
 
   it('should return `Fizz` when multiple of 3', () => {
     expect(FizzBuzz(3)).to.be.equal('Fizz');
@@ -21,5 +21,9 @@ describe('[Main] - Fizzbuz', () => {
   it('should return the number when non-multiple', () => {
     expect(FizzBuzz(7)).to.be.equal(7);
     expect(FizzBuzz(11)).to.be.equal(11);
+  });
+
+  it('should return 0 when 0', () => {
+    expect(FizzBuzz(0)).to.be.equal(0);
   });
 });
